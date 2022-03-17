@@ -1,4 +1,4 @@
-package com.in28minutes.rest.webservices.restfulwebservices;
+package com.in28minutes.rest.webservices.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
 
@@ -18,7 +18,7 @@ public class HelloWorldBean {
 
     @Override
     public String toString() {
-        return "com.in28minutes.rest.webservices.restfulwebservices.HelloWorldBean{" +
+        return "com.in28minutes.rest.webservices.restfulwebservices.helloworld.HelloWorldBean{" +
                 "message='" + message + '\'' +
                 '}';
     }
