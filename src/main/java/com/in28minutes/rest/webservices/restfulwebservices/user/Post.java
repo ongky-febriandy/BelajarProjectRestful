@@ -1,25 +1,22 @@
 package com.in28minutes.rest.webservices.restfulwebservices.user;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import net.minidev.json.annotate.JsonIgnore;
+
+import javax.persistence.*;
 
 @Entity
 public class Post {
 
+    @Id
+    @GeneratedValue
     private Integer id;
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     private User user;
 
-    @Override
-    public String toString() {
-        return "Post{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
+
 
     public Integer getId() {
         return id;
@@ -43,5 +40,13 @@ public class Post {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
